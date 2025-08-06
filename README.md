@@ -1,6 +1,11 @@
-# Welcome to your Expo app 👋
+# TechNews ⬜️🟥
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+React Native [Expo](https://expo.dev) project that shows the top 20 stories from the HackerNews public API.
+
+## Requirements
+
+- Node.js (LTS)
+- macOS, Windows (Powershell and WSL 2), and Linux are supported.
 
 ## Get started
 
@@ -13,12 +18,16 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 2. Start the app
 
    ```bash
-   npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+You can then scan the QR code to open the app on your phone with the Expo Go app, or press `i`/`a` to open iOS/Android simulator, `w` to open the web version, or read all the other options in the output.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+For a complete list of expo commands read about Expo CLI [here](https://docs.expo.dev/more/expo-cli/)
+
+## Tech stack
+
+The App use [Expo Router](https://docs.expo.dev/router/introduction/) for navigation, [Tanstack Query](https://tanstack.com/query/latest) for server state management and [Reanimated](https://docs.swmansion.com/react-native-reanimated/) for the transitions.
+
+> [!NOTE]  
+> Transitions are available only on the app version.
