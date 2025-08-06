@@ -21,7 +21,7 @@ React Native [Expo](https://expo.dev) project that shows the top 20 stories from
    npm start
    ```
 
-You can then scan the QR code to open the app on your phone with the Expo Go app, or press `i`/`a` to open iOS/Android simulator, `w` to open the web version, or read all the other options in the output.
+You can then scan the QR code with the Expo Go app to test the app on your phone, press `i`/`a` to open iOS/Android simulator (or on your phone, if it is connected via USB), `w` to open the web version, or read all the other options in the output.
 
 For a complete list of expo commands read about Expo CLI [here](https://docs.expo.dev/more/expo-cli/)
 
