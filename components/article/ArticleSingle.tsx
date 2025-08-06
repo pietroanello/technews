@@ -1,11 +1,11 @@
 import SvgLogo from '@/assets/svgs/LogoSvg'
 import useWindowSize from '@/hooks/useWindowSize'
+import { Article } from '@/types'
 import { Link, useRouter } from 'expo-router'
 import React from 'react'
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { ExternalLink } from '../ExternalLink'
-import { Article } from '../home/ArticlePreview'
 import ArticleStatsBy from '../home/ArticleStatsBy'
 import { ThemedText } from '../ThemedText'
 

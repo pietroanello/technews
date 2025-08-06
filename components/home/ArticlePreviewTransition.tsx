@@ -26,10 +26,7 @@ const withCustomTiming = (toValue: number, userConfig?: object, callback?: Anima
   )
 }
 
-const ArticlePreviewTransition = memo<{
-  article: Article
-  onArticleToggle?: (isOpen: boolean) => void
-}>(function Art({
+const ArticlePreviewTransition = memo(function ArticlePreviewTransition({
   article,
   onArticleToggle,
 }: {

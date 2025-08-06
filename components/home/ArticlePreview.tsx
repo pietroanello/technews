@@ -2,12 +2,12 @@ import { Colors } from '@/constants/Colors'
 import useWindowSize from '@/hooks/useWindowSize'
 import { Article } from '@/types'
 import { Link, useRouter } from 'expo-router'
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import { Platform, Pressable, StyleSheet } from 'react-native'
 import { ThemedText } from '../ThemedText'
 import ArticleStatsBy from './ArticleStatsBy'
 
-const ArticlePreview = ({ article }: { article: Article }) => {
+const ArticlePreview = memo(function ArticlePreview({ article }: { article: Article }) {
   const router = useRouter()
   const { width } = useWindowSize()
   const [isHovered, setIsHovered] = useState(false)
@@ -31,7 +31,7 @@ const ArticlePreview = ({ article }: { article: Article }) => {
       </Pressable>
     </Link>
   )
-}
+})
 
 export default ArticlePreview
 
