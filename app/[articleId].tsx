@@ -18,7 +18,7 @@ const Article = () => {
     return <ArticleLoader />
   }
 
-  if (error || !data || (data.type !== 'story' && data.type !== 'job')) {
+  if (error || !data || data.dead || data.deleted || (data.type !== 'story' && data.type !== 'job')) {
     return <NotFoundScreen />
   }
 
