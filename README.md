@@ -31,3 +31,9 @@ The App use [Expo Router](https://docs.expo.dev/router/introduction/) for naviga
 
 > [!NOTE]  
 > Transitions are available only on the app version.
+
+### About text, comments and webviews
+
+Text and comments for each story are not displayed inside the single story view. The main reason is that they are strings that may have html tags inside. Using webviews (or the expo DOM components) could be a solution that works fine on the Expo Go app versions, but some options like `matchContents` or `onShouldStartLoadWithRequest` should be tested better on release builds. Additionally, the API structure requires to traverse a tree of comments to load everything, and in some cases this can result in a lot of server requests.
+
+Comments can be read on news.ycombinator.com by clicking the comment count.
