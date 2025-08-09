@@ -5,6 +5,7 @@ import { Article } from '@/types'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import Animated, { StyleProps } from 'react-native-reanimated'
+import { ExternalLink } from '../ExternalLink'
 import { ThemedText } from '../ThemedText'
 
 const ArticleStatsBy = ({ article, animatedStyle }: { article: Article; animatedStyle?: StyleProps }) => {
@@ -16,10 +17,12 @@ const ArticleStatsBy = ({ article, animatedStyle }: { article: Article; animated
           <ThemedText style={{ fontSize: 14 }}>{article.score || 0}</ThemedText>
         </View>
 
-        <View style={[styles.flexCenter, { gap: 5 }]}>
-          <CommentSvg stroke='white' strokeWidth={1} width={18} />
-          <ThemedText style={{ fontSize: 14 }}>{article.descendants || 0}</ThemedText>
-        </View>
+        <ExternalLink href={`https://news.ycombinator.com/item?id=${article.id}`}>
+          <View style={[styles.flexCenter, { gap: 5 }]}>
+            <CommentSvg stroke='white' strokeWidth={1} width={18} />
+            <ThemedText style={{ fontSize: 14 }}>{article.descendants || 0}</ThemedText>
+          </View>
+        </ExternalLink>
       </View>
 
       {article.by && (
