@@ -43,7 +43,7 @@ const ArticleSingle = ({ article }: { article: Article }) => {
           </ExternalLink>
         )}
 
-        <ArticleStatsBy article={article} />
+        <ArticleStatsBy article={article} withExternalLink />
       </ScrollView>
     </View>
   )

@@ -8,7 +8,24 @@ import Animated, { StyleProps } from 'react-native-reanimated'
 import { ExternalLink } from '../ExternalLink'
 import { ThemedText } from '../ThemedText'
 
-const ArticleStatsBy = ({ article, animatedStyle }: { article: Article; animatedStyle?: StyleProps }) => {
+const ArticleStatsBy = ({
+  article,
+  animatedStyle,
+  withExternalLink = false,
+}: {
+  article: Article
+  animatedStyle?: StyleProps
+  withExternalLink?: boolean
+}) => {
+  function renderCommentIcon() {
+    return (
+      <View style={[styles.flexCenter, { gap: 5 }]}>
+        <CommentSvg stroke='white' strokeWidth={1} width={18} />
+        <ThemedText style={{ fontSize: 14 }}>{article.descendants || 0}</ThemedText>
+      </View>
+    )
+  }
+
   return (
     <Animated.View style={[styles.container, animatedStyle]}>
       <View style={[styles.flexCenter, { gap: 10 }]}>
@@ -17,12 +34,13 @@ const ArticleStatsBy = ({ article, animatedStyle }: { article: Article; animated
           <ThemedText style={{ fontSize: 14 }}>{article.score || 0}</ThemedText>
         </View>
 
-        <ExternalLink href={`https://news.ycombinator.com/item?id=${article.id}`}>
-          <View style={[styles.flexCenter, { gap: 5 }]}>
-            <CommentSvg stroke='white' strokeWidth={1} width={18} />
-            <ThemedText style={{ fontSize: 14 }}>{article.descendants || 0}</ThemedText>
-          </View>
-        </ExternalLink>
+        {withExternalLink ? (
+          <ExternalLink href={`https://news.ycombinator.com/item?id=${article.id}`}>
+            {renderCommentIcon()}
+          </ExternalLink>
+        ) : (
+          renderCommentIcon()
+        )}
       </View>
 
       {article.by && (

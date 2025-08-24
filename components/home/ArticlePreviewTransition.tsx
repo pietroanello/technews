@@ -171,7 +171,7 @@ const ArticlePreviewTransition = memo(function ArticlePreviewTransition({
         <Animated.View style={[styles.contentContainer, contentContainerAnimatedStyle]}>
           <View style={{ flex: 1, gap: 40, padding: 16 }}>
             <ThemedText variant='h2'>{article.title}</ThemedText>
-            <ArticleStatsBy article={article} animatedStyle={commentStyles} />
+            <ArticleStatsBy article={article} animatedStyle={commentStyles} withExternalLink />
           </View>
 
           <Animated.View style={[{ borderRadius: 12 }, detailStyle]}>
