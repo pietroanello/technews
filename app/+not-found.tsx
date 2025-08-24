@@ -1,7 +1,7 @@
 import Button from '@/components/Button'
+import Head from '@/components/Head'
 import { ThemedText } from '@/components/ThemedText'
 import { Link } from 'expo-router'
-import Head from 'expo-router/head'
 import { StyleSheet, View } from 'react-native'
 
 export default function NotFoundScreen() {

@@ -1,7 +1,7 @@
+import Head from '@/components/Head'
 import ArticlesList from '@/components/home/ArticlesList'
 import Error from '@/components/home/Error'
 import useArticlesApi from '@/hooks/api/useArticlesApi'
-import Head from 'expo-router/head'
 import { useCallback } from 'react'
 
 export default function HomeScreen() {
